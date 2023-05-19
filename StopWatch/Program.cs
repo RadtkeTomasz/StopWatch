@@ -27,10 +27,11 @@ public class MyStopwatch
     {
         if (_interval == default)
         {
-            throw new InvalidOperationException("Stop the stopwatch to measure the time first.");
+            throw new InvalidOperationException("Start and stop the stopwatch to measure the time first.");
         }
         else
         {
+            _interval = _stop - _start;
             return _interval;
         }
     }
