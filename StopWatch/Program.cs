@@ -11,7 +11,7 @@ public class MyStopwatch
     {
         if (_isRunning)
         {
-            return;
+            throw new InvalidOperationException("Timer already running.");
         }
         _start = DateTimeOffset.Now;
         _isRunning = true;
