@@ -22,6 +22,11 @@ public class MyStopwatch
         {
             _stop = DateTimeOffset.Now;
         }
+        else
+        {
+            throw new InvalidOperationException("Start the timer first.");
+        }
+
     }
     public TimeSpan GetInterval()
     {
